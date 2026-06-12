@@ -1,10 +1,10 @@
 # =============================================================================
 # core/extractor.py  (skill_extractor)
-# Responsible for: cleaned text → set of matched technical skills.
+# Responsible for: cleaned text - set of matched technical skills.
 #
 # Strategy:
-#   1. Single-word skills  → checked via token-level set lookup  (O(1))
-#   2. Multi-word skills   → checked via sliding n-gram window   (O(n))
+#   1. Single-word skills  - checked via token-level set lookup  (O(1))
+#   2. Multi-word skills   - checked via sliding n-gram window   (O(n))
 #
 # Works on BOTH resume text and job description so scorer.py can
 # compute the intersection (matched skills) and difference (missing skills).

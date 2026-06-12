@@ -1,6 +1,6 @@
 # =============================================================================
 # core/ranker.py
-# Responsible for: list of score dicts → sorted, labelled pandas DataFrame.
+# Responsible for: list of score dicts - sorted, labelled pandas DataFrame.
 #
 # Steps:
 #   1. Convert raw score results from scorer.py into a DataFrame.

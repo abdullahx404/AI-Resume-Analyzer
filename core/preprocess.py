@@ -1,6 +1,6 @@
 # =============================================================================
 # core/preprocess.py
-# Responsible for: raw text → clean, normalised text.
+# Responsible for: raw text - clean, normalised text.
 #
 # Pipeline (in order):
 #   1. Lowercase

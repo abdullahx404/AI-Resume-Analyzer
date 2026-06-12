@@ -1,19 +1,19 @@
 # =============================================================================
 # core/parser.py  (pdf_extractor)
-# Responsible for: PDF → clean raw text extraction.
+# Responsible for: PDF - clean raw text extraction.
 #
 # Accepts either a file path (str / Path) or a file-like object
 # (e.g. Streamlit's UploadedFile).  Returns a plain string.
 #
 # Handles:
 #   - Multi-page PDFs
-#   - Encrypted / password-protected PDFs   ← uses doc.is_encrypted API
-#   - Corrupted PDFs                         ← fitz.FileDataError
-#   - Empty PDFs (no extractable text)       ← fitz.EmptyFileError (≥1.24)
+#   - Encrypted / password-protected PDFs   <- uses doc.is_encrypted API
+#   - Corrupted PDFs                         <- fitz.FileDataError
+#   - Empty PDFs (no extractable text)       <- fitz.EmptyFileError (>=1.24)
 #   - Non-PDF file types
 #
 # Compatibility note:
-#   fitz.PasswordError was REMOVED in PyMuPDF ≥1.18.  The correct modern
+#   fitz.PasswordError was REMOVED in PyMuPDF >=1.18.  The correct modern
 #   pattern is to check doc.is_encrypted after open() and call
 #   doc.authenticate(password).  This file uses that pattern exclusively.
 # =============================================================================
@@ -56,8 +56,8 @@ def extract_text(source: Union[str, Path, bytes, io.IOBase]) -> str:
     try:
         doc = _open_document(source)
 
-        # ── Encryption check (replaces the removed fitz.PasswordError) ──────
-        # PyMuPDF ≥1.18 removed fitz.PasswordError entirely.
+        # Encryption check (replaces the removed fitz.PasswordError)
+        # PyMuPDF >=1.18 removed fitz.PasswordError entirely.
         # The correct approach is: open succeeds but doc.is_encrypted == True.
         # doc.authenticate("") tries an empty password (covers many Word exports).
         # Returns 0 on failure, non-zero on success.

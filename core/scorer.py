@@ -3,14 +3,14 @@
 # Responsible for: computing the final match score for each resume.
 #
 # Formula:
-#   Final Score = (SEMANTIC_WEIGHT × cosine_similarity)
-#               + (SKILL_WEIGHT    × skill_overlap_score)
+#   Final Score = (SEMANTIC_WEIGHT * cosine_similarity)
+#               + (SKILL_WEIGHT    * skill_overlap_score)
 #   Scaled to [0, 100] for display.
 #
 # Inputs come from:
-#   - embedder.py   → numpy vectors (for cosine similarity)
-#   - extractor.py  → skill sets    (for skill overlap)
-#   - settings.py   → weight constants
+#   - embedder.py   - numpy vectors (for cosine similarity)
+#   - extractor.py  - skill sets    (for skill overlap)
+#   - settings.py   - weight constants
 # =============================================================================
 
 import logging

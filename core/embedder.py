@@ -1,6 +1,6 @@
 # =============================================================================
 # core/embedder.py
-# Responsible for: text → dense vector embedding.
+# Responsible for: text - dense vector embedding.
 #
 # Model: all-MiniLM-L6-v2  (384 dimensions)
 #   - Fast inference (~14k sentences/sec on CPU)

@@ -9,35 +9,35 @@ A tool that reads resumes and job descriptions, then scores and ranks resumes ba
 
 ## Setup Steps
 
-1. **Download or clone this project** to your computer
+1. Download or clone this project to your computer
 
-2. **Open a command prompt or terminal** in the project folder
+2. Open a command prompt or terminal in the project folder
 
-3. **Install the required packages:**
+3. Install the required packages:
    ```
    pip install -r requirements.txt
    ```
 
-4. **Download NLTK data** (needed for text processing):
+4. Download NLTK data (needed for text processing):
    ```
    python -m nltk.downloader punkt stopwords averaged_perceptron_tagger
    ```
 
 ## How to Run
 
-1. **Open command prompt or terminal** in the project folder
+1. Open command prompt or terminal in the project folder
 
-2. **Run the app:**
+2. Run the app:
    ```
    streamlit run app.py
    ```
 
-3. **A web page will open automatically** in your browser. If not, open:
+3. A web page will open automatically in your browser. If not, open:
    ```
    http://localhost:8501
    ```
 
-4. **Use the web page to:**
+4. Use the web page to:
    - Upload resumes (PDF or text files)
    - Paste a job description
    - Click "Analyze" to see matching scores
